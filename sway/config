@@ -194,6 +194,9 @@ for_window [app_id="sway-help"]             floating enable, resize set 900 700,
 #
 # Layout stuff:
 #
+    # Default layout for new workspaces
+    workspace_layout tabbed
+
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
@@ -290,6 +293,9 @@ assign [app_id="kitty"]                workspace number 1
 assign [app_id="org.telegram.desktop"] workspace number 2
 assign [app_id="org.signal.Signal"]    workspace number 2
 assign [class="Slack"]                 workspace number 2
+assign [app_id="im.riot.Riot"]         workspace number 2
+assign [app_id="com.bitwarden.desktop"] workspace number 2
+assign [class="Bitwarden"]             workspace number 2
 assign [app_id="firefox"]              workspace number 3
 
 # Launch them
@@ -297,6 +303,8 @@ exec kitty
 exec flatpak run org.telegram.desktop
 exec flatpak run org.signal.Signal
 exec slack
+exec flatpak run im.riot.Riot
+exec bitwarden
 exec firefox
 
 include /etc/sway/config.d/*
