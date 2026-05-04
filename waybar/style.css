@@ -1,0 +1,129 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "Noto Sans", sans-serif;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: #1d2021;
+    color: #ebdbb2;
+}
+
+#workspaces {
+    background-color: transparent;
+    margin: 0 4px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    margin: 2px 2px;
+    background-color: #3c3836;
+    color: #a89984;
+    border-radius: 3px;
+}
+
+#workspaces button:hover {
+    background-color: #504945;
+    color: #ebdbb2;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+    background-color: #458588;
+    color: #1d2021;
+}
+
+#workspaces button.urgent {
+    background-color: #cc241d;
+    color: #ebdbb2;
+}
+
+#mode {
+    background-color: #d79921;
+    color: #1d2021;
+    padding: 0 10px;
+    margin: 2px 0;
+    border-radius: 3px;
+}
+
+#window {
+    color: #bdae93;
+    padding: 0 10px;
+}
+
+#clock {
+    padding: 0 10px;
+    margin: 2px 2px;
+    color: #d3869b;
+}
+
+#battery {
+    padding: 0 10px;
+    margin: 2px 2px;
+    color: #b8bb26;
+}
+
+#backlight {
+    padding: 0 10px;
+    margin: 2px 2px;
+    color: #fabd2f;
+}
+
+#network {
+    padding: 0 10px;
+    margin: 2px 2px;
+    color: #83a598;
+}
+
+#pulseaudio {
+    padding: 0 10px;
+    margin: 2px 2px;
+    color: #8ec07c;
+}
+
+#tray {
+    padding: 0 10px;
+    margin: 2px 2px;
+}
+
+#battery.warning {
+    color: #fabd2f;
+}
+
+#battery.critical:not(.charging) {
+    color: #fb4934;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#network.disconnected {
+    color: #fb4934;
+}
+
+#pulseaudio.muted {
+    color: #665c54;
+}
+
+@keyframes blink {
+    to {
+        color: #1d2021;
+        background-color: #fb4934;
+    }
+}
+
+tooltip {
+    background-color: #282828;
+    border: 1px solid #504945;
+}
+
+tooltip label {
+    color: #ebdbb2;
+    padding: 2px 4px;
+}

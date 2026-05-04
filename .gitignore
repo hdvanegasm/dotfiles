@@ -1,0 +1,12 @@
+# Ignore everything by default
+/*
+
+# Whitelist tracked configs
+!/.gitignore
+!/sway/
+!/waybar/
+!/mako/
+!/kitty/
+
+# Within tracked dirs, exclude noise
+kitty/*.bak
