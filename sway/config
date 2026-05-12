@@ -4,6 +4,9 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+### Fonts
+font pango:JetBrainsMono Nerd Font 11
+
 ### Variables
 #
 
@@ -128,6 +131,9 @@ for_window [app_id="sway-help"]             floating enable, resize set 900 700,
 
     # Suspend the system
     bindsym $mod+Shift+s exec systemctl suspend
+
+    # Power off the system
+    bindsym $mod+Shift+p exec swaynag -t warning -m 'Power off?' -B 'Yes, power off' 'systemctl poweroff'
 #
 # Moving around:
 #
